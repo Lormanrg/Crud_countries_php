@@ -20,11 +20,12 @@ $query = mysqli_query($con,$sql);
 
 <body>
     <div>
-        <form action="insert_paises.php" method ="POST"> 
+        <form action="insert_paises.php" method="POST"> 
             <h1>Agregar País</h1>
-            <input type="text" country="country" placeholder="Country">
-            <input type="text" zone="zone" placeholder="Zone">
-            <input type="text" code_iso="code_iso" placeholder="Code_iso">
+
+            <input type="text" name="name" placeholder="Country">
+            <input type="text" name="zone" placeholder="Zone">
+            <input type="text" name="code_iso" placeholder="Code_iso">
             <input type="submit" value="Agregar país" >
         </form>
     </div>
@@ -50,6 +51,7 @@ $query = mysqli_query($con,$sql);
             <th><?= $row['name']?></th>
             <th><?= $row['zone']?></th>
             <th><?= $row['code_iso']?></th>
+
             <th><a href="">Editar</th>
             <th><a href="">Eliminar</th>
             </tr>
