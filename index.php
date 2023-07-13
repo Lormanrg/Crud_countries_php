@@ -15,11 +15,11 @@ $query = mysqli_query($con,$sql);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ingrese el país</title>
-
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
 
 <body>
-    <div>
+    <div class= "paises-form">
         <form action="insert_paises.php" method="POST"> 
             <h1>Agregar País</h1>
 
@@ -30,7 +30,7 @@ $query = mysqli_query($con,$sql);
         </form>
     </div>
 
-    <div>
+    <div class="paises-table">
         <h2>Paises Registrados</h2>
         <table>
             <thead>
@@ -52,8 +52,8 @@ $query = mysqli_query($con,$sql);
             <th><?= $row['zone']?></th>
             <th><?= $row['code_iso']?></th>
 
-            <th><a href="">Editar</th>
-            <th><a href="">Eliminar</th>
+            <th><a href="update.php?id=<?= $row['id']?>" class="paises-table--edit">Editar</th>
+            <th><a href="delete.php?id=<?= $row['id']?>" class="paises-table--delete">Eliminar</th>
             </tr>
             <?php endwhile;?>
         </tbody>
