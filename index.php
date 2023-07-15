@@ -53,7 +53,7 @@ $query = mysqli_query($con,$sql);
             <th><?= $row['code_iso']?></th>
 
             <th><a href="update.php?id=<?= $row['id']?>" class="paises-table--edit">Editar</th>
-            <th><a href="delete.php?id=<?= $row['id']?>" class="paises-table--delete">Eliminar</th>
+            <th><a href="delete_paises.php?id=<?= $row['id']?>" class="paises-table--delete">Eliminar</th>
             </tr>
             <?php endwhile;?>
         </tbody>
